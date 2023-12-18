@@ -1,0 +1,78 @@
+mql5
+//+------------------------------------------------------------------+
+//|                     Red Hawk EA                                   |
+//|       Expert Advisor for mean reversion trading system            |
+//|                                                                  |
+//|       Developer's site: forexroboteasy.com                        |
+//|       Development by: Forex Robot Easy Team                       |
+//|                                                                  |
+//|       Key Features:                                               |
+//|       - Internal filters to identify ideal trading conditions     |
+//|       - Avoid unfavorable market conditions                       |
+//|       - Necessary trading functions to implement the algorithm    |
+//+------------------------------------------------------------------+
+
+// External parameters
+extern string EA_Version = 'Red Hawk EA v1.0';
+extern string EA_Author = 'Forex Robot Easy Team';
+extern string EA_Site = 'forexroboteasy.com';
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                  Trading Functions                                |
+//|                                                                  |
+//+------------------------------------------------------------------+
+
+// Function to check if market conditions are favorable
+bool IsMarketFavorable()
+{
+    // Add your code here to check for favorable market conditions
+    // Return true if conditions are favorable, false otherwise
+}
+
+// Function to open a buy trade
+void OpenBuyTrade()
+{
+    // Add your code here to open a buy trade
+}
+
+// Function to open a sell trade
+void OpenSellTrade()
+{
+    // Add your code here to open a sell trade
+}
+
+// Function to close a trade
+void CloseTrade()
+{
+    // Add your code here to close the current trade
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                  Red Hawk EA Main Function                        |
+//|                                                                  |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Check if market conditions are favorable
+    if (IsMarketFavorable())
+    {
+        // Open buy or sell trade based on your trading strategy
+        if (OpenBuyTrade())
+        {
+            // Add code here to manage the buy trade
+        }
+        else if (OpenSellTrade())
+        {
+            // Add code here to manage the sell trade
+        }
+    }
+    else
+    {
+        // Close any open trades as market conditions are unfavorable
+        CloseTrade();
+    }
+}
+
+//+------------------------------------------------------------------+
